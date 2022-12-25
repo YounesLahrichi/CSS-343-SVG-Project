@@ -1,0 +1,256 @@
+Sun 09 Jan 2022 05:04:42 PM PST
+Linux csslab2h 4.19.0-18-amd64 #1 SMP Debian 4.19.208-1 (2021-09-29) x86_64 GNU/Linux
+uid=1175921(younesl) gid=2121175921(younesl) groups=2121175921(younesl),605559(lab-access)
+=====================================================
+1. Compiles without warnings with -Wall -Wextra flags
+=====================================================
+=====================================================
+2. Runs and produces correct output
+=====================================================
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: rectangle
+Reading: circle
+Reading: rectangle
+Reading: rectangle
+Reading: circle
+Reading: ellipse
+Reading: line
+Reading: line
+Reading: line
+Reading: ellipse
+Reading: rectangle
+=====================================================
+3. clang-tidy warnings are fixed
+=====================================================
+13259 warnings generated.
+26518 warnings generated.
+39777 warnings generated.
+53276 warnings generated.
+66536 warnings generated.
+Suppressed 66536 warnings (66536 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+=====================================================
+4. clang-format does not find any formatting issues
+=====================================================
+Running clang-format on ./circle.cpp
+Running clang-format on ./ellipse.cpp
+Running clang-format on ./line.cpp
+Running clang-format on ./main.cpp
+Running clang-format on ./rectangle.cpp
+=====================================================
+5. No memory leaks using g++
+=====================================================
+=====================================================
+6. No memory leaks using valgrind, look for "definitely lost" 
+=====================================================
+==43049== Memcheck, a memory error detector
+==43049== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==43049== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==43049== Command: ./a.out input1.txt svg1.svg
+==43049== Parent PID: 42913
+==43049== 
+==43049== 
+==43049== HEAP SUMMARY:
+==43049==     in use at exit: 0 bytes in 0 blocks
+==43049==   total heap usage: 154 allocs, 154 frees, 106,160 bytes allocated
+==43049== 
+==43049== All heap blocks were freed -- no leaks are possible
+==43049== 
+==43049== For counts of detected and suppressed errors, rerun with: -v
+==43049== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+=====================================================
+7. Tests have full code coverage
+=====================================================
+File '/home/NETID/younesl/2022win343d-hello-YounesLahrichi/2022win343d-svg-YounesLahrichi/circle.cpp':
+Name                                 Regions    Miss   Cover     Lines    Miss   Cover
+--------------------------------------------------------------------------------------
+Circle::write(std::ostream&) const         1       0 100.00%        10       0 100.00%
+Circle::read(std::istream&)                1       0 100.00%         4       0 100.00%
+--------------------------------------------------------------------------------------
+TOTAL                                      2       0 100.00%        14       0 100.00%
+
+File '/home/NETID/younesl/2022win343d-hello-YounesLahrichi/2022win343d-svg-YounesLahrichi/ellipse.cpp':
+Name                                  Regions    Miss   Cover     Lines    Miss   Cover
+---------------------------------------------------------------------------------------
+Ellipse::write(std::ostream&) const         1       0 100.00%        11       0 100.00%
+Ellipse::read(std::istream&)                1       0 100.00%         4       0 100.00%
+---------------------------------------------------------------------------------------
+TOTAL                                       2       0 100.00%        15       0 100.00%
+
+File '/home/NETID/younesl/2022win343d-hello-YounesLahrichi/2022win343d-svg-YounesLahrichi/line.cpp':
+Name                                  Regions    Miss   Cover     Lines    Miss   Cover
+---------------------------------------------------------------------------------------
+Line::write(std::ostream&) const            1       0 100.00%        11       0 100.00%
+Line::read(std::istream&)                   1       0 100.00%         4       0 100.00%
+---------------------------------------------------------------------------------------
+TOTAL                                       2       0 100.00%        15       0 100.00%
+
+File '/home/NETID/younesl/2022win343d-hello-YounesLahrichi/2022win343d-svg-YounesLahrichi/main.cpp':
+Name                                                                                                                                                                                             Regions    Miss   Cover     Lines    Miss   Cover
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+readSVGFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                   20       2  90.00%        33       8  75.76%
+writeSVGFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<SVG*, std::allocator<SVG*> >&)                                                        8       2  75.00%        22       5  77.27%
+processSVGFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)         2       0 100.00%         8       0 100.00%
+main                                                                                                                                                                                                   4       1  75.00%         9       3  66.67%
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                 34       5  85.29%        72      16  77.78%
+
+File '/home/NETID/younesl/2022win343d-hello-YounesLahrichi/2022win343d-svg-YounesLahrichi/rectangle.cpp':
+Name                                                                                                                                                                                             Regions    Miss   Cover     Lines    Miss   Cover
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Rectangle::write(std::ostream&) const                                                                                                                                                                  1       0 100.00%        11       0 100.00%
+Rectangle::read(std::istream&)                                                                                                                                                                         1       0 100.00%         4       0 100.00%
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                  2       0 100.00%        15       0 100.00%
+=====================================================
+The lines below were never executed
+=====================================================
+   16|      0|    cout << "Failed to open: " << inFile << endl;
+   17|      0|    return svgs;
+   18|      0|  }
+   32|      0|      cout << "Unrecognized type: " << sType << endl;
+   33|      0|      string junk;
+   34|      0|      getline(fin, junk);
+   35|      0|      obj = nullptr;
+   36|      0|    }
+   49|      0|    return false;
+   50|      0|  }
+   53|      0|    cout << "Failed to write to: " << outFile << endl;
+   54|      0|    return false;
+   55|      0|  }
+   84|      0|    cout << "usage: svg inputfile outputfile [input2 output2] ..." << endl;
+   85|      0|    exit(EXIT_FAILURE);
+   86|      0|  }
+Sun 09 Jan 2022 05:05:16 PM PST
+=====================================================
+To create an output.txt file with all the output from this script
+Run the below command
+      ./create-output.sh > output.txt 2>&1 
+=====================================================
